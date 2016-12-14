@@ -1,6 +1,8 @@
 import cv2
 import numpy as np
 import sys
+import os
+from datetime import datetime
 
 drawing = False
 sx, sy = 0, 0
@@ -30,17 +32,29 @@ def draw_circle(event, x, y, flags, param):
             rectangles.append([(sx, sy), (x, y)])
 
 
+def save_as_text(text):
+    f = open('{0}.txt'.format(datetime.now().strftime('%Y/%m/%d %H:%M')), 'w')
+    f.write(tag)
+    print("saved")
+    f.close()
+
+
 img = np.zeros((512, 512, 3), np.uint8)
 cv2.namedWindow('image')
 cv2.setMouseCallback('image', draw_circle)
 
+files_dir = './data/train_datas/'
+files = os.listdir(files_dir)
+
 i = 0
-while i < len(sys.argv):
+tag = ""
+for file in files:
     rectangles = []
     while True:
-        img = cv2.imread('data/train_datas/(.png')
+        img = cv2.imread(files_dir + file)
         for r in rectangles:
             cv2.rectangle(img, r[0], r[1], (255, 255, 255), 2)
+
         if drawing:
             w = abs(sx - gx)
             h = abs(sy - gy)
@@ -55,21 +69,23 @@ while i < len(sys.argv):
         if k == ord('d'):
             if rectangles:
                 rectangles.pop()
-        elif k == ord('n'):
+        elif k == ord('s'):
             if len(rectangles) > 0:
-                print(sys.argv[i], len(rectangles),)
                 for r in rectangles:
                     x = min(r[0][0], r[1][0])
                     y = min(r[0][1], r[1][1])
                     w = abs(r[0][0] - r[1][0])
                     h = abs(r[0][1] - r[1][1])
-                    print(x, y, w, h)
-            i += 1
-            break
-        elif k == ord('b'):
-            print('delete previous line!')
-            if i > 1:
-                i -= 2
+                tag += r"""
+                <image file='{0}'>
+                  <box top='{1}' left='{2}' width='{3}' height='{4}'/>
+                </image>""".format(file, y, x, w, h)
+                i += 1
                 break
         elif k == ord('q'):
+            file_name = 'xml/image_data_{0}.txt'.format(datetime.now().strftime('%Y%m%d%H%M'))
+            f = open(file_name, 'w')
+            f.write(tag)
+            print("saved")
+            f.close()
             sys.exit()
