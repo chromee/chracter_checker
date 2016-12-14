@@ -1,24 +1,22 @@
-import sys  # モジュール属性 argv を取得するため
+array = ["aaa", "bbb", "ccc"]
 
-# argvs = sys.argv  # コマンドライン引数を格納したリストの取得
-# argc = len(argvs)  # 引数の個数
-# # デバッグプリント
-# print(len(sys.argv))
-# print(argc)
-#
-# if (argc != 2):  # 引数が足りない場合は、その旨を表示
-#     print('Usage: # python %s filename' % argvs[0])
-#     quit()  # プログラムの終了
-#
-# print('The content of %s ...n' % argvs[1])
-#
-# f = open(argvs[1])
-# line = f.readline()  # 1行読み込む(改行文字も含まれる)
-# while line:
-#     print(line)
-#     line = f.readline()
-# f.close
+str = """aaaa
+bbbbbbbbbbbbbb
+cccccccccccccc
+dddddddddddddd
+eeeeeeeeeeeeee"""
 
-for i in range(10):
-    print
-    i, i + 1,
+params = [['aaa', 1, 2, 3, 4], ['bbb', 2, 3, 4, 5], ['ccc', 3, 4, 5, 6]]
+
+for p in params:
+    t = '<image file=\'{0}\'><box top=\'{y}\' left=\'{x]\' width=\'{w}\' height=\'{h}\'/></image>'.format(name=p[0], y=p[1], x=p[2], w=p[3], h=p[4], )
+    print(t)
+
+# f = open('text.txt', 'w')  # 書き込みモードで開く
+# for a in array:
+#     f.write(a)  # 引数の文字列をファイルに書き込む
+#
+# f = open('text.txt', 'r')
+# print(f)
+#
+# f.close()  # ファイルを閉じる
