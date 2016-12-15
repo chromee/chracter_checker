@@ -4,10 +4,11 @@ import cv2
 import numpy as np
 
 face_cascade = cv2.CascadeClassifier('haarcascades/lbpcascade_animeface.xml')
-files_dir = './data/train_datas/'
+files_dir = './data/train_data/'
 files = os.listdir(files_dir)
 
 MASK_SIZE = 10
+
 
 def check_face(img):
     size = img.shape[:2]
@@ -18,19 +19,20 @@ def check_face(img):
 
     faces = face_cascade.detectMultiScale(gray)
     for (x, y, w, h) in faces:
-        lx = x - 10
-        ly = y - 20
+        lx = x - 10 if x > 10 else 0
+        ly = y - 20 if y > 20 else 0
         lw = w + 20
         lh = h + 20
 
         roi_color = img[ly:ly + lh, lx:lx + lw]
         face_img[ly:ly + lh, lx:lx + lw] = roi_color
-        is_face_present =True
+        is_face_present = True
 
         cv2.rectangle(img, (lx, ly), (lx + lw, ly + lh), (255, 0, 0), 2)
 
     cv2.imshow("original", img)
     return face_img if is_face_present else img
+
 
 def check_character(check_img, character_name, color_name, hsv_min_array, hsv_max_array):
     check_img = cv2.resize(check_img, (orig_size[1] // MASK_SIZE, orig_size[0] // MASK_SIZE))
@@ -57,13 +59,17 @@ for file in files:
 
     face_img = check_face(img)
 
-    character_and_color_counts.append(check_character(face_img, 'mao'   , 'orange' , np.array([10, 120, 140]), np.array([20, 255, 255])))
-    character_and_color_counts.append(check_character(face_img, 'sion'  , 'violet' , np.array([120, 80, 50]) , np.array([150, 255, 255])))
-    character_and_color_counts.append(check_character(face_img, 'megumi', 'pink'   , np.array([155, 80, 50]) , np.array([170, 255, 255])))
-    character_and_color_counts.append(check_character(face_img, 'kirara', 'yellow' , np.array([20, 10, 10])  , np.array([34, 255, 255])))
+    character_and_color_counts.append(
+        check_character(face_img, 'mao', 'orange', np.array([10, 120, 140]), np.array([20, 255, 255])))
+    character_and_color_counts.append(
+        check_character(face_img, 'sion', 'violet', np.array([120, 80, 50]), np.array([150, 255, 255])))
+    character_and_color_counts.append(
+        check_character(face_img, 'megumi', 'pink', np.array([155, 80, 50]), np.array([170, 255, 255])))
+    character_and_color_counts.append(
+        check_character(face_img, 'kirara', 'yellow', np.array([20, 10, 10]), np.array([34, 255, 255])))
 
     character = max(character_and_color_counts)[1]
-    print(character+"が映っています")
+    print(character + "が映っています")
     # shutil.move('./data/' + file, "./data/%s/%s" % (character, file))
     cv2.waitKey(0)
     cv2.destroyAllWindows()

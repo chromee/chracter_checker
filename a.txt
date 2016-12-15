@@ -1,0 +1,10 @@
+
+<image file='aaa'>
+  <box top='1' left='2' width='3' height='4'/>
+</image>
+<image file='bbb'>
+  <box top='2' left='3' width='4' height='5'/>
+</image>
+<image file='ccc'>
+  <box top='3' left='4' width='5' height='6'/>
+</image>
