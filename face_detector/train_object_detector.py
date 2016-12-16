@@ -34,7 +34,7 @@ options.add_left_right_image_flips = True
 # empirically by checking how well the trained detector works on a test set of
 # images you haven't trained on.  Don't just leave the value set at 5.  Try a
 # few different C values and see what works best for your data.
-options.C = 5
+options.C = 6
 # Tell the code how many CPU cores your computer has for the fastest training.
 options.num_threads = 4
 options.be_verbose = True

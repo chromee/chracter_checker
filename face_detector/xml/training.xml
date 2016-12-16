@@ -3,229 +3,229 @@
 <dataset>
   <name>imglab dataset</name>
   <images>
-    <image file='./training/GJ-bu 01 (1).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (1).png'>
       <box top='-61' left='154' width='321' height='329'/>
     </image>
-    <image file='./training/GJ-bu 01 (2).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (2).png'>
       <box top='-5' left='151' width='221' height='232'/>
     </image>
-    <image file='./training/GJ-bu 01 (3).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (3).png'>
       <box top='4' left='286' width='238' height='246'/>
     </image>
-    <image file='./training/GJ-bu 01 (4).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (4).png'>
       <box top='4' left='63' width='270' height='268'/>
     </image>
-    <image file='./training/GJ-bu 01 (5).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (5).png'>
       <box top='1' left='283' width='284' height='279'/>
     </image>
-    <image file='./training/GJ-bu 01 (6).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (6).png'>
       <box top='0' left='96' width='269' height='287'/>
     </image>
-    <image file='./training/GJ-bu 01 (7).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (7).png'>
       <box top='50' left='180' width='153' height='162'/>
     </image>
-    <image file='./training/GJ-bu 01 (8).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (8).png'>
       <box top='104' left='138' width='117' height='127'/>
     </image>
-    <image file='./training/GJ-bu 01 (9).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (9).png'>
       <box top='49' left='229' width='95' height='101'/>
     </image>
-    <image file='./training/GJ-bu 01 (10).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (10).png'>
       <box top='24' left='246' width='221' height='216'/>
     </image>
-    <image file='./training/GJ-bu 01 (11).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (11).png'>
       <box top='0' left='107' width='208' height='212'/>
     </image>
-    <image file='./training/GJ-bu 01 (12).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (12).png'>
       <box top='9' left='321' width='153' height='142'/>
     </image>
-    <image file='./training/GJ-bu 01 (13).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (13).png'>
       <box top='18' left='122' width='210' height='207'/>
     </image>
-    <image file='./training/GJ-bu 01 (14).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (14).png'>
       <box top='158' left='86' width='89' height='93'/>
     </image>
-    <image file='./training/GJ-bu 01 (15).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (15).png'>
       <box top='60' left='217' width='148' height='156'/>
     </image>
-    <image file='./training/GJ-bu 01 (16).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (16).png'>
       <box top='14' left='367' width='89' height='88'/>
     </image>
-    <image file='./training/GJ-bu 01 (17).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (17).png'>
       <box top='93' left='157' width='92' height='100'/>
     </image>
-    <image file='./training/GJ-bu 01 (18).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (18).png'>
       <box top='-10' left='181' width='253' height='247'/>
     </image>
-    <image file='./training/GJ-bu 01 (19).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (19).png'>
       <box top='2' left='410' width='192' height='190'/>
     </image>
-    <image file='./training/GJ-bu 01 (20).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (20).png'>
       <box top='-9' left='190' width='287' height='257'/>
     </image>
-    <image file='./training/GJ-bu 01 (21).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (21).png'>
       <box top='18' left='258' width='145' height='148'/>
     </image>
-    <image file='./training/GJ-bu 01 (22).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (22).png'>
       <box top='-3' left='78' width='325' height='307'/>
     </image>
-    <image file='./training/GJ-bu 01 (23).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (23).png'>
       <box top='-26' left='136' width='282' height='286'/>
     </image>
-    <image file='./training/GJ-bu 01 (24).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (24).png'>
       <box top='31' left='372' width='251' height='245'/>
     </image>
-    <image file='./training/GJ-bu 01 (25).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (25).png'>
       <box top='32' left='268' width='83' height='79'/>
     </image>
-    <image file='./training/GJ-bu 01 (26).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (26).png'>
       <box top='10' left='251' width='139' height='137'/>
     </image>
-    <image file='./training/GJ-bu 01 (27).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (27).png'>
       <box top='5' left='357' width='171' height='176'/>
     </image>
-    <image file='./training/GJ-bu 01 (28).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (28).png'>
       <box top='-18' left='210' width='306' height='343'/>
     </image>
-    <image file='./training/GJ-bu 01 (29).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (29).png'>
       <box top='-4' left='117' width='343' height='342'/>
     </image>
-    <image file='./training/GJ-bu 01 (30).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (30).png'>
       <box top='5' left='68' width='284' height='260'/>
     </image>
-    <image file='./training/GJ-bu 01 (31).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (31).png'>
       <box top='36' left='110' width='160' height='162'/>
     </image>
-    <image file='./training/GJ-bu 01 (32).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (32).png'>
       <box top='-24' left='126' width='217' height='224'/>
     </image>
-    <image file='./training/GJ-bu 01 (33).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (33).png'>
       <box top='-1' left='159' width='340' height='337'/>
     </image>
-    <image file='./training/GJ-bu 01 (34).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (34).png'>
       <box top='0' left='292' width='278' height='277'/>
     </image>
-    <image file='./training/GJ-bu 01 (35).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (35).png'>
       <box top='59' left='81' width='129' height='140'/>
     </image>
-    <image file='./training/GJ-bu 01 (36).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (36).png'>
       <box top='18' left='323' width='189' height='183'/>
     </image>
-    <image file='./training/GJ-bu 01 (37).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (37).png'>
       <box top='24' left='184' width='217' height='214'/>
     </image>
-    <image file='./training/GJ-bu 01 (38).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (38).png'>
       <box top='11' left='171' width='226' height='219'/>
     </image>
-    <image file='./training/GJ-bu 01 (39).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (39).png'>
       <box top='34' left='203' width='207' height='215'/>
     </image>
-    <image file='./training/GJ-bu 01 (40).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (40).png'>
       <box top='1' left='297' width='254' height='258'/>
     </image>
-    <image file='./training/GJ-bu 01 (41).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (41).png'>
       <box top='31' left='179' width='156' height='163'/>
     </image>
-    <image file='./training/GJ-bu 01 (42).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (42).png'>
       <box top='28' left='153' width='240' height='253'/>
     </image>
-    <image file='./training/GJ-bu 01 (43).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (43).png'>
       <box top='157' left='174' width='158' height='164'/>
     </image>
-    <image file='./training/GJ-bu 01 (44).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (44).png'>
       <box top='79' left='39' width='258' height='271'/>
     </image>
-    <image file='./training/GJ-bu 01 (45).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (45).png'>
       <box top='1' left='201' width='272' height='248'/>
     </image>
-    <image file='./training/GJ-bu 01 (46).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (46).png'>
       <box top='2' left='91' width='263' height='279'/>
     </image>
-    <image file='./training/GJ-bu 01 (47).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (47).png'>
       <box top='32' left='206' width='184' height='177'/>
     </image>
-    <image file='./training/GJ-bu 01 (48).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (48).png'>
       <box top='0' left='108' width='434' height='355'/>
     </image>
-    <image file='./training/GJ-bu 01 (49).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (49).png'>
       <box top='13' left='173' width='194' height='201'/>
     </image>
-    <image file='./training/GJ-bu 01 (50).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (50).png'>
       <box top='63' left='116' width='153' height='154'/>
     </image>
-    <image file='./training/GJ-bu 01 (51).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (51).png'>
       <box top='1' left='152' width='334' height='317'/>
     </image>
-    <image file='./training/GJ-bu 01 (52).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (52).png'>
       <box top='1' left='151' width='174' height='175'/>
     </image>
-    <image file='./training/GJ-bu 01 (53).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (53).png'>
       <box top='52' left='389' width='147' height='154'/>
     </image>
-    <image file='./training/GJ-bu 01 (54).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (54).png'>
       <box top='27' left='350' width='257' height='279'/>
     </image>
-    <image file='./training/GJ-bu 01 (55).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (55).png'>
       <box top='1' left='255' width='292' height='288'/>
     </image>
-    <image file='./training/GJ-bu 01 (56).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (56).png'>
       <box top='3' left='127' width='261' height='283'/>
     </image>
-    <image file='./training/GJ-bu 01 (57).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (57).png'>
       <box top='4' left='119' width='268' height='288'/>
     </image>
-    <image file='./training/GJ-bu 01 (58).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (58).png'>
       <box top='31' left='211' width='186' height='194'/>
     </image>
-    <image file='./training/GJ-bu 01 (59).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (59).png'>
       <box top='79' left='346' width='218' height='212'/>
     </image>
-    <image file='./training/GJ-bu 01 (60).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (60).png'>
       <box top='99' left='341' width='166' height='181'/>
     </image>
-    <image file='./training/GJ-bu 01 (61).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (61).png'>
       <box top='97' left='340' width='171' height='183'/>
     </image>
-    <image file='./training/GJ-bu 01 (62).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (62).png'>
       <box top='2' left='232' width='291' height='277'/>
     </image>
-    <image file='./training/GJ-bu 01 (63).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (63).png'>
       <box top='9' left='171' width='250' height='268'/>
     </image>
-    <image file='./training/GJ-bu 01 (64).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (64).png'>
       <box top='1' left='211' width='224' height='211'/>
     </image>
-    <image file='./training/GJ-bu 01 (65).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (65).png'>
       <box top='1' left='138' width='171' height='162'/>
     </image>
-    <image file='./training/GJ-bu 01 (66).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (66).png'>
       <box top='0' left='163' width='239' height='244'/>
     </image>
-    <image file='./training/GJ-bu 01 (67).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (67).png'>
       <box top='11' left='195' width='233' height='256'/>
     </image>
-    <image file='./training/GJ-bu 01 (68).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (68).png'>
       <box top='2' left='198' width='243' height='247'/>
     </image>
-    <image file='./training/GJ-bu 01 (69).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (69).png'>
       <box top='-1' left='183' width='263' height='252'/>
     </image>
-    <image file='./training/GJ-bu 01 (70).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (70).png'>
       <box top='0' left='251' width='266' height='257'/>
     </image>
-    <image file='./training/GJ-bu 01 (71).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (71).png'>
       <box top='0' left='244' width='243' height='250'/>
     </image>
-    <image file='./training/GJ-bu 01 (72).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (72).png'>
       <box top='1' left='193' width='270' height='278'/>
     </image>
-    <image file='./training/GJ-bu 01 (73).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (73).png'>
       <box top='7' left='177' width='268' height='290'/>
     </image>
-    <image file='./training/GJ-bu 01 (74).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (74).png'>
       <box top='-4' left='145' width='245' height='256'/>
     </image>
-    <image file='./training/GJ-bu 01 (75).png'>
+    <image file='C:/Users/odk/PycharmProjects/check_character/face_detector/xml/training/GJ-bu 01 (75).png'>
       <box top='17' left='150' width='277' height='280'/>
     </image>
   </images>
