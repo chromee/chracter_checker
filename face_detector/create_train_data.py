@@ -37,8 +37,9 @@ img = np.zeros((512, 512, 3), np.uint8)
 cv2.namedWindow('image')
 cv2.setMouseCallback('image', draw_circle)
 
-data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)) + '/data/tank/'
-train_dir = data_dir + 'train/'
+parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+data_dir = parent_dir + '/data/gjbu/'
+train_dir = data_dir + 'test/'
 train_finish_dir = data_dir + 'train_finish/'
 files = os.listdir(train_dir)
 
@@ -82,7 +83,8 @@ for file in files:
                 i += 1
                 break
         elif k == ord('q'):
-            file_name = './face_detector/xml/image_data_{0}.txt'.format(datetime.now().strftime('%Y%m%d%H%M'))
+            file_name = parent_dir + '/face_detector/xml/image_data_{0}.txt'.format(
+                datetime.now().strftime('%Y%m%d%H%M'))
             f = open(file_name, 'w')
             f.write(tag)
             print("saved")
@@ -90,3 +92,12 @@ for file in files:
             for data in finish_data:
                 shutil.move(train_dir + data, train_finish_dir + data)
             sys.exit()
+
+file_name = parent_dir + '/face_detector/xml/image_data_{0}.txt'.format(datetime.now().strftime('%Y%m%d%H%M'))
+f = open(file_name, 'w')
+f.write(tag)
+print("saved")
+f.close()
+for data in finish_data:
+    shutil.move(train_dir + data, train_finish_dir + data)
+sys.exit()

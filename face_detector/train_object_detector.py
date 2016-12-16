@@ -10,14 +10,14 @@ from skimage import io
 # faces dataset in the examples/faces directory.  This means you need to supply
 # the path to this faces folder as a command line argument so we will know
 # where it is.
-if len(sys.argv) != 2:
-    print(
-        "Give the path to the examples/faces directory as the argument to this "
-        "program. For example, if you are in the python_examples folder then "
-        "execute this program by running:\n"
-        "    ./train_object_detector.py ../examples/faces")
-    exit()
-faces_folder = sys.argv[1]
+# if len(sys.argv) != 2:
+#     print(
+#         "Give the path to the examples/faces directory as the argument to this "
+#         "program. For example, if you are in the python_examples folder then "
+#         "execute this program by running:\n"
+#         "    ./train_object_detector.py ../examples/faces")
+#     exit()
+# faces_folder = sys.argv[1]
 
 
 # Now let's do the training.  The train_simple_object_detector() function has a
@@ -39,7 +39,7 @@ options.C = 5
 options.num_threads = 4
 options.be_verbose = True
 
-
+faces_folder = './xml'
 training_xml_path = os.path.join(faces_folder, "training.xml")
 testing_xml_path = os.path.join(faces_folder, "testing.xml")
 # This function does the actual training.  It will save the final detector to
