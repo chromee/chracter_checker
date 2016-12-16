@@ -1,0 +1,217 @@
+
+                <image file='tank (1).jpg'>
+                  <box top='0' left='0' width='300' height='450'/>
+                </image>
+                <image file='tank (10).jpg'>
+                  <box top='0' left='0' width='250' height='500'/>
+                </image>
+                <image file='tank (11).jpg'>
+                  <box top='0' left='0' width='250' height='500'/>
+                </image>
+                <image file='tank (12).jpg'>
+                  <box top='0' left='0' width='300' height='400'/>
+                </image>
+                <image file='tank (13).jpg'>
+                  <box top='0' left='0' width='300' height='400'/>
+                </image>
+                <image file='tank (14).jpg'>
+                  <box top='0' left='0' width='300' height='400'/>
+                </image>
+                <image file='tank (15).jpg'>
+                  <box top='0' left='0' width='300' height='400'/>
+                </image>
+                <image file='tank (16).jpg'>
+                  <box top='0' left='0' width='300' height='415'/>
+                </image>
+                <image file='tank (17).jpg'>
+                  <box top='0' left='0' width='281' height='500'/>
+                </image>
+                <image file='tank (18).jpg'>
+                  <box top='0' left='0' width='281' height='500'/>
+                </image>
+                <image file='tank (19).jpg'>
+                  <box top='0' left='0' width='300' height='469'/>
+                </image>
+                <image file='tank (2).JPG'>
+                  <box top='0' left='0' width='300' height='430'/>
+                </image>
+                <image file='tank (20).jpg'>
+                  <box top='0' left='0' width='300' height='469'/>
+                </image>
+                <image file='tank (21).jpg'>
+                  <box top='0' left='0' width='300' height='415'/>
+                </image>
+                <image file='tank (22).jpg'>
+                  <box top='0' left='0' width='280' height='500'/>
+                </image>
+                <image file='tank (23).jpg'>
+                  <box top='0' left='0' width='280' height='500'/>
+                </image>
+                <image file='tank (24).jpg'>
+                  <box top='0' left='0' width='281' height='500'/>
+                </image>
+                <image file='tank (25).jpg'>
+                  <box top='0' left='0' width='281' height='500'/>
+                </image>
+                <image file='tank (26).jpg'>
+                  <box top='0' left='0' width='295' height='500'/>
+                </image>
+                <image file='tank (27).jpg'>
+                  <box top='0' left='0' width='295' height='500'/>
+                </image>
+                <image file='tank (28).jpg'>
+                  <box top='0' left='0' width='300' height='354'/>
+                </image>
+                <image file='tank (29).jpg'>
+                  <box top='0' left='0' width='300' height='354'/>
+                </image>
+                <image file='tank (3).JPG'>
+                  <box top='0' left='0' width='300' height='430'/>
+                </image>
+                <image file='tank (30).jpg'>
+                  <box top='0' left='0' width='289' height='500'/>
+                </image>
+                <image file='tank (31).jpg'>
+                  <box top='0' left='0' width='289' height='500'/>
+                </image>
+                <image file='tank (32).jpg'>
+                  <box top='0' left='0' width='258' height='500'/>
+                </image>
+                <image file='tank (33).jpg'>
+                  <box top='0' left='0' width='258' height='500'/>
+                </image>
+                <image file='tank (34).jpg'>
+                  <box top='0' left='0' width='300' height='450'/>
+                </image>
+                <image file='tank (35).jpg'>
+                  <box top='0' left='0' width='300' height='450'/>
+                </image>
+                <image file='tank (36).jpg'>
+                  <box top='0' left='0' width='247' height='500'/>
+                </image>
+                <image file='tank (37).jpg'>
+                  <box top='0' left='0' width='247' height='500'/>
+                </image>
+                <image file='tank (38).jpg'>
+                  <box top='0' left='0' width='263' height='500'/>
+                </image>
+                <image file='tank (39).jpg'>
+                  <box top='0' left='0' width='263' height='500'/>
+                </image>
+                <image file='tank (4).jpg'>
+                  <box top='0' left='0' width='300' height='476'/>
+                </image>
+                <image file='tank (40).jpg'>
+                  <box top='0' left='0' width='263' height='500'/>
+                </image>
+                <image file='tank (41).jpg'>
+                  <box top='0' left='0' width='263' height='500'/>
+                </image>
+                <image file='tank (42).jpg'>
+                  <box top='0' left='0' width='259' height='500'/>
+                </image>
+                <image file='tank (43).jpg'>
+                  <box top='0' left='0' width='259' height='500'/>
+                </image>
+                <image file='tank (44).jpg'>
+                  <box top='0' left='0' width='262' height='500'/>
+                </image>
+                <image file='tank (45).jpg'>
+                  <box top='0' left='0' width='262' height='500'/>
+                </image>
+                <image file='tank (46).jpg'>
+                  <box top='0' left='0' width='292' height='500'/>
+                </image>
+                <image file='tank (47).jpg'>
+                  <box top='0' left='0' width='292' height='500'/>
+                </image>
+                <image file='tank (48).jpg'>
+                  <box top='0' left='0' width='300' height='494'/>
+                </image>
+                <image file='tank (49).jpg'>
+                  <box top='0' left='0' width='300' height='494'/>
+                </image>
+                <image file='tank (5).jpg'>
+                  <box top='0' left='0' width='300' height='476'/>
+                </image>
+                <image file='tank (50).jpg'>
+                  <box top='0' left='0' width='300' height='400'/>
+                </image>
+                <image file='tank (51).jpg'>
+                  <box top='0' left='0' width='300' height='400'/>
+                </image>
+                <image file='tank (52).jpg'>
+                  <box top='0' left='0' width='300' height='399'/>
+                </image>
+                <image file='tank (53).jpg'>
+                  <box top='0' left='0' width='300' height='399'/>
+                </image>
+                <image file='tank (54).jpg'>
+                  <box top='0' left='0' width='258' height='500'/>
+                </image>
+                <image file='tank (55).jpg'>
+                  <box top='0' left='0' width='258' height='500'/>
+                </image>
+                <image file='tank (56).jpg'>
+                  <box top='0' left='0' width='262' height='500'/>
+                </image>
+                <image file='tank (57).jpg'>
+                  <box top='0' left='0' width='262' height='500'/>
+                </image>
+                <image file='tank (58).jpg'>
+                  <box top='0' left='0' width='281' height='500'/>
+                </image>
+                <image file='tank (59).jpg'>
+                  <box top='0' left='0' width='281' height='500'/>
+                </image>
+                <image file='tank (6).jpg'>
+                  <box top='0' left='0' width='281' height='500'/>
+                </image>
+                <image file='tank (60).jpg'>
+                  <box top='0' left='0' width='300' height='411'/>
+                </image>
+                <image file='tank (61).jpg'>
+                  <box top='0' left='0' width='300' height='411'/>
+                </image>
+                <image file='tank (62).jpg'>
+                  <box top='0' left='0' width='300' height='490'/>
+                </image>
+                <image file='tank (63).jpg'>
+                  <box top='0' left='0' width='300' height='490'/>
+                </image>
+                <image file='tank (64).jpg'>
+                  <box top='0' left='0' width='300' height='454'/>
+                </image>
+                <image file='tank (65).jpg'>
+                  <box top='0' left='0' width='300' height='454'/>
+                </image>
+                <image file='tank (66).jpg'>
+                  <box top='0' left='0' width='300' height='399'/>
+                </image>
+                <image file='tank (67).jpg'>
+                  <box top='0' left='0' width='300' height='399'/>
+                </image>
+                <image file='tank (68).jpg'>
+                  <box top='0' left='0' width='300' height='497'/>
+                </image>
+                <image file='tank (69).jpg'>
+                  <box top='0' left='0' width='300' height='497'/>
+                </image>
+                <image file='tank (7).jpg'>
+                  <box top='0' left='0' width='281' height='500'/>
+                </image>
+                <image file='tank (70).jpg'>
+                  <box top='0' left='0' width='281' height='500'/>
+                </image>
+                <image file='tank (71).jpg'>
+                  <box top='0' left='0' width='281' height='500'/>
+                </image>
+                <image file='tank (72).jpg'>
+                  <box top='0' left='0' width='300' height='450'/>
+                </image>
+                <image file='tank (8).jpg'>
+                  <box top='0' left='0' width='300' height='447'/>
+                </image>
+                <image file='tank (9).jpg'>
+                  <box top='0' left='0' width='300' height='447'/>
+                </image>

@@ -29,17 +29,17 @@ def draw_circle(event, x, y, flags, param):
         drawing = False
         w = abs(sx - x)
         h = abs(sy - y)
-        if w < h * 1.1 and h < w * 1.1:
-            rectangles.append([(sx, sy), (x, y)])
+        # if w < h * 1.1 and h < w * 1.1:
+        rectangles.append([(sx, sy), (x, y)])
 
 
 img = np.zeros((512, 512, 3), np.uint8)
 cv2.namedWindow('image')
 cv2.setMouseCallback('image', draw_circle)
 
-data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)) + '/data/'
-train_dir = data_dir + 'train_data/'
-train_finish_dir = data_dir + 'train_data_finish/'
+data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)) + '/data/tank/'
+train_dir = data_dir + 'train/'
+train_finish_dir = data_dir + 'train_finish/'
 files = os.listdir(train_dir)
 
 i = 0
@@ -49,6 +49,7 @@ for file in files:
     rectangles = []
     while True:
         img = cv2.imread(train_dir + file)
+
         for r in rectangles:
             cv2.rectangle(img, r[0], r[1], (255, 255, 255), 2)
 
