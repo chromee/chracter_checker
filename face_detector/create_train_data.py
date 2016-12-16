@@ -39,11 +39,12 @@ cv2.setMouseCallback('image', draw_circle)
 
 data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)) + '/data/'
 train_dir = data_dir + 'train_data/'
-train_finish_dir = data_dir + 'train_data_finish'
+train_finish_dir = data_dir + 'train_data_finish/'
 files = os.listdir(train_dir)
 
 i = 0
 tag = ""
+finish_data = []
 for file in files:
     rectangles = []
     while True:
@@ -76,13 +77,15 @@ for file in files:
                 <image file='{0}'>
                   <box top='{1}' left='{2}' width='{3}' height='{4}'/>
                 </image>""".format(file, y, x, w, h)
-                shutil.move(data_dir + file, train_finish_dir + file)
+                finish_data.append(file)
                 i += 1
                 break
         elif k == ord('q'):
-            file_name = 'xml/image_data_{0}.txt'.format(datetime.now().strftime('%Y%m%d%H%M'))
+            file_name = './face_detector/xml/image_data_{0}.txt'.format(datetime.now().strftime('%Y%m%d%H%M'))
             f = open(file_name, 'w')
             f.write(tag)
             print("saved")
             f.close()
+            for data in finish_data:
+                shutil.move(train_dir + data, train_finish_dir + data)
             sys.exit()
