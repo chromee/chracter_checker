@@ -38,18 +38,18 @@ cv2.namedWindow('image')
 cv2.setMouseCallback('image', draw_circle)
 
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
-data_dir = parent_dir + '/data/gjbu/'
-train_dir = data_dir + 'test/'
-train_finish_dir = data_dir + 'train_finish/'
-files = os.listdir(train_dir)
+img_dir = parent_dir + '/data/gj-bu/data/'
+img_finish_dir = parent_dir + '/data/gj-bu/data_finish/'
+xml_dir = "C:/Users/odk/PycharmProjects/check_character/face_detector/xml/testing/"
 
-i = 0
 tag = ""
 finish_data = []
+
+files = os.listdir(img_dir)
 for file in files:
     rectangles = []
     while True:
-        img = cv2.imread(train_dir + file)
+        img = cv2.imread(img_dir + file)
 
         for r in rectangles:
             cv2.rectangle(img, r[0], r[1], (255, 255, 255), 2)
@@ -75,12 +75,11 @@ for file in files:
                     y = min(r[0][1], r[1][1])
                     w = abs(r[0][0] - r[1][0])
                     h = abs(r[0][1] - r[1][1])
-                tag += r"""
-                <image file='{0}'>
-                  <box top='{1}' left='{2}' width='{3}' height='{4}'/>
-                </image>""".format(file, y, x, w, h)
+                    tag += r"""
+    <image file='{0}'>
+      <box top='{1}' left='{2}' width='{3}' height='{4}'/>
+    </image>""".format(xml_dir + file, y, x, w, h)
                 finish_data.append(file)
-                i += 1
                 break
         elif k == ord('q'):
             file_name = parent_dir + '/face_detector/xml/image_data_{0}.txt'.format(
@@ -90,7 +89,7 @@ for file in files:
             print("saved")
             f.close()
             for data in finish_data:
-                shutil.move(train_dir + data, train_finish_dir + data)
+                shutil.move(img_dir + data, img_finish_dir + data)
             sys.exit()
 
 file_name = parent_dir + '/face_detector/xml/image_data_{0}.txt'.format(datetime.now().strftime('%Y%m%d%H%M'))
@@ -99,5 +98,5 @@ f.write(tag)
 print("saved")
 f.close()
 for data in finish_data:
-    shutil.move(train_dir + data, train_finish_dir + data)
+    shutil.move(img_dir + data, img_finish_dir + data)
 sys.exit()

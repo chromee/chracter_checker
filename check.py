@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 
 face_cascade = cv2.CascadeClassifier('haarcascades/lbpcascade_animeface.xml')
-files_dir = './data/train_data/'
+files_dir = './data/gj-bu/train/'
 files = os.listdir(files_dir)
 
 MASK_SIZE = 10
