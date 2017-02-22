@@ -29,17 +29,17 @@ def draw_circle(event, x, y, flags, param):
         drawing = False
         w = abs(sx - x)
         h = abs(sy - y)
-        # if w < h * 1.1 and h < w * 1.1:
-        rectangles.append([(sx, sy), (x, y)])
+        if w < h * 1.1 and h < w * 1.1:
+            rectangles.append([(sx, sy), (x, y)])
 
 
 img = np.zeros((512, 512, 3), np.uint8)
 cv2.namedWindow('image')
 cv2.setMouseCallback('image', draw_circle)
 
-parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
-img_dir = parent_dir + '/data/gj-bu/data/'
-img_finish_dir = parent_dir + '/data/gj-bu/data_finish/'
+project_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+img_dir = project_dir + '/data/gj-bu/data/'
+img_finish_dir = project_dir + '/data/gj-bu/data_finish/'
 xml_dir = "C:/Users/odk/PycharmProjects/check_character/face_detector/xml/testing/"
 
 tag = ""
@@ -75,15 +75,17 @@ for file in files:
                     y = min(r[0][1], r[1][1])
                     w = abs(r[0][0] - r[1][0])
                     h = abs(r[0][1] - r[1][1])
-                    tag += r"""
-    <image file='{0}'>
-      <box top='{1}' left='{2}' width='{3}' height='{4}'/>
-    </image>""".format(xml_dir + file, y, x, w, h)
-                finish_data.append(file)
+                    # tag += r"""
+                    #         <image file='{0}'>
+                    #           <box top='{1}' left='{2}' width='{3}' height='{4}'/>
+                    #         </image>
+                    #         """.format(xml_dir + file, y, x, w, h)
+                    trimming_img = img[y:y+h, x:x+w]
+                    trimming_img.imwrite()
+                # finish_data.append(file)
                 break
         elif k == ord('q'):
-            file_name = parent_dir + '/face_detector/xml/image_data_{0}.txt'.format(
-                datetime.now().strftime('%Y%m%d%H%M'))
+            file_name = project_dir + '/face_detector/xml/image_data_{0}.txt'.format(datetime.now().strftime('%Y%m%d%H%M'))
             f = open(file_name, 'w')
             f.write(tag)
             print("saved")
@@ -92,7 +94,7 @@ for file in files:
                 shutil.move(img_dir + data, img_finish_dir + data)
             sys.exit()
 
-file_name = parent_dir + '/face_detector/xml/image_data_{0}.txt'.format(datetime.now().strftime('%Y%m%d%H%M'))
+file_name = project_dir + '/face_detector/xml/image_data_{0}.txt'.format(datetime.now().strftime('%Y%m%d%H%M'))
 f = open(file_name, 'w')
 f.write(tag)
 print("saved")

@@ -1,6 +1,7 @@
 /data
 /.idea
 /avi
+*.jpg
 *.png
 *.avi
 *.mp4
