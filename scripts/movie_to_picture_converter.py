@@ -14,8 +14,3 @@ while cap.isOpened():
         index += 1
     else:
         break
-
-
-class Abc:
-    def puts(self):
-        print(self)

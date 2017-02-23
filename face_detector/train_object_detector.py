@@ -9,12 +9,13 @@ options = dlib.simple_object_detector_training_options()
 
 options.add_left_right_image_flips = True
 
-options.C = 3
+options.C = 5
 
 options.num_threads = 4
 options.be_verbose = True
 
-faces_folder = './xml'
+project_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+faces_folder = project_dir + '/face_detector/xml/'
 training_xml_path = os.path.join(faces_folder, "training.xml")
 testing_xml_path = os.path.join(faces_folder, "testing.xml")
 dlib.train_simple_object_detector(training_xml_path, "detector.svm", options)
