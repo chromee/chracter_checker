@@ -1,8 +1,6 @@
 import cv2
-import sys
 import os
 from datetime import datetime
-from xml.dom import minidom
 
 project_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 
@@ -57,6 +55,6 @@ testing_xml_text = create_xml_text(pic_dir)
 
 output_text(text_dir, training_xml_text)
 output_text(text_dir, testing_xml_text)
-print(xml_dir+"training.xml")
+
 replace_xml(xml_dir+"training.xml", training_xml_text)
 replace_xml(xml_dir+"testing.xml", testing_xml_text)
