@@ -14,7 +14,7 @@ def flip_image(flip_code):
         img = cv2.imread(img_dir + file)
         img = cv2.flip(img, flip_code)
         name, ext = os.path.splitext(file)
-        file_name = name + ext
+        file_name = file
         if flip_code == 0:
             file_name = name + "_flip_xAxis" + ext
         elif flip_code == 1:
