@@ -2,40 +2,48 @@ import cv2
 import os
 import shutil
 
-IMG_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)) + '/data/movie/'
-IMG_SIZE = (320, 180)
-files = os.listdir(IMG_DIR)
-TARGET_FILE = files[0]
 
+class SimilarPictureDeleter:
 
-def target_hist_val(target_name):
-    target_img_path = IMG_DIR + target_name
-    target_img = cv2.imread(target_img_path)
-    target_img = cv2.resize(target_img, IMG_SIZE)
-    target_hist = cv2.calcHist([target_img], [0], None, [256], [0, 256])
-    return target_hist
+    SAFE_MODE = 0
+    DELETE_MODE = 1
 
+    @staticmethod
+    def delete(img_set_dir, mode):
+        img_size = (320, 180)
+        files = os.listdir(img_set_dir)
 
-print('TARGET_FILE: %s' % TARGET_FILE)
+        if len(files) == 0:
+            print("no file in %s" % img_set_dir)
+            return 0
 
+        target_filea_name = files[0]
+        # safe_dir = img_set_dir + "shelter/"
+        # if not os.path.exists(safe_dir):
+        #     os.mkdir(safe_dir)
 
-for file in files:
-    if file == '.DS_Store' or file == TARGET_FILE:
-        continue
+        for file in files:
+            if file == '.DS_Store' or file == target_filea_name:
+                continue
+            target_img_path = img_set_dir + target_filea_name
+            print(target_img_path)
+            target_img = cv2.imread(target_img_path)
+            cv2.imshow("img", target_img)
+            cv2.waitKey(0)
+            target_img = cv2.resize(target_img, img_size)
+            target_hist = cv2.calcHist([target_img], [0], None, [256], [0, 256])
 
-    # print('TARGET_FILE: %s' % TARGET_FILE)
-    target_hist = target_hist_val(TARGET_FILE)
-    comparing_img_path = IMG_DIR + file
-    comparing_img = cv2.imread(comparing_img_path)
-    comparing_img = cv2.resize(comparing_img, IMG_SIZE)
-    comparing_hist = cv2.calcHist([comparing_img], [0], None, [256], [0, 256])
+            comparing_img_path = img_set_dir + file
+            comparing_img = cv2.imread(comparing_img_path)
+            comparing_img = cv2.resize(comparing_img, img_size)
+            comparing_hist = cv2.calcHist([comparing_img], [0], None, [256], [0, 256])
 
-    ret = cv2.compareHist(target_hist, comparing_hist, 0)
-    # print(file, "%03.5f"%ret)
+            ret = cv2.compareHist(target_hist, comparing_hist, 0)
 
-    if ret < 0.95:
-        TARGET_FILE = file
-    else:
-        shutil.move(comparing_img_path, IMG_DIR + "test/" + file)
-        # os.remove(comparing_img_path)
-
+            if ret < 0.95:
+                target_file = file
+            else:
+                if mode == SimilarPictureDeleter.SAFE_MODE:
+                    shutil.move(comparing_img_path, safe_dir + file)
+                elif mode == SimilarPictureDeleter.DELETE_MODE:
+                    os.remove(comparing_img_path)
