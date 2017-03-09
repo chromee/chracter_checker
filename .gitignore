@@ -5,3 +5,7 @@
 *.png
 *.avi
 *.mp4
+*.svm
+*.txt
+*.xml
+*.db

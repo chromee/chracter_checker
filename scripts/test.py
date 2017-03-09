@@ -26,7 +26,24 @@ file_name = os.path.splitext(os.path.split(movie_dir)[1])[0]
 # text = os.path.normcase(path)
 # files=os.listdir()
 # print(text)
-path="D:\documents\PycharmProjects\check_character\data\cap\アスタリスク1期 OP/アスタリスク1期 OP_000001.jpg"
-img=cv2.imread(path)
-cv2.imshow("image", img)
-cv2.waitKey(0)
+# path="D:\documents\PycharmProjects\check_character\data\cap\アスタリスク1期 OP/アスタリスク1期 OP_000001.jpg"
+# img=cv2.imread(path)
+# cv2.imshow("image", img)
+# cv2.waitKey(0)
+
+import sqlite3
+
+dbname = "face_database.db"
+conn = sqlite3.connect(dbname)
+c = conn.cursor()
+
+create_table = "create table images (name text, dir text, type text)"
+c.execute(create_table)
+
+conn.commit()
+
+select_sql = 'select * from images'
+for row in c.execute(select_sql):
+    print(row)
+
+conn.close()

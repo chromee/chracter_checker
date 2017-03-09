@@ -23,7 +23,7 @@ for file in files:
     faces = face_cascade.detectMultiScale(gray)
     dets = my_detector(img)
     for (x, y, w, h) in faces:
-        cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
+        cv2.rectangle(img, (x, y), (x + w, y + h), (255, 255, 0), 2)
     for d in dets:
         cv2.rectangle(img, (d.left(), d.top()), (d.right(), d.bottom()), (0, 0, 255), 2)
 

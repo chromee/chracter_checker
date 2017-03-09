@@ -9,7 +9,7 @@ options = dlib.simple_object_detector_training_options()
 
 options.add_left_right_image_flips = True
 
-options.C = 5
+options.C = 20
 
 options.num_threads = 4
 options.be_verbose = True
@@ -57,32 +57,32 @@ for f in glob.glob(os.path.join(faces_folder, "*.jpg")):
 # train_simple_object_detector().  If you have already loaded your training
 # images and bounding boxes for the objects then you can call it as shown
 # below.
-
-# You just need to put your images into a list.
-images = [io.imread(faces_folder + '/2008_002506.jpg'),
-          io.imread(faces_folder + '/2009_004587.jpg')]
-# Then for each image you make a list of rectangles which give the pixel
-# locations of the edges of the boxes.
-boxes_img1 = ([dlib.rectangle(left=329, top=78, right=437, bottom=186),
-               dlib.rectangle(left=224, top=95, right=314, bottom=185),
-               dlib.rectangle(left=125, top=65, right=214, bottom=155)])
-boxes_img2 = ([dlib.rectangle(left=154, top=46, right=228, bottom=121),
-               dlib.rectangle(left=266, top=280, right=328, bottom=342)])
-# And then you aggregate those lists of boxes into one big list and then call
-# train_simple_object_detector().
-boxes = [boxes_img1, boxes_img2]
-
-detector2 = dlib.train_simple_object_detector(images, boxes, options)
-# We could save this detector to disk by uncommenting the following.
-# detector2.save('detector2.svm')
-
-# Now let's look at its HOG filter!
-win_det.set_image(detector2)
-dlib.hit_enter_to_continue()
-
-# Note that you don't have to use the XML based input to
-# test_simple_object_detector().  If you have already loaded your training
-# images and bounding boxes for the objects then you can call it as shown
-# below.
-print("\nTraining accuracy: {}".format(
-    dlib.test_simple_object_detector(images, boxes, detector2)))
+#
+# # You just need to put your images into a list.
+# images = [io.imread(faces_folder + '/2008_002506.jpg'),
+#           io.imread(faces_folder + '/2009_004587.jpg')]
+# # Then for each image you make a list of rectangles which give the pixel
+# # locations of the edges of the boxes.
+# boxes_img1 = ([dlib.rectangle(left=329, top=78, right=437, bottom=186),
+#                dlib.rectangle(left=224, top=95, right=314, bottom=185),
+#                dlib.rectangle(left=125, top=65, right=214, bottom=155)])
+# boxes_img2 = ([dlib.rectangle(left=154, top=46, right=228, bottom=121),
+#                dlib.rectangle(left=266, top=280, right=328, bottom=342)])
+# # And then you aggregate those lists of boxes into one big list and then call
+# # train_simple_object_detector().
+# boxes = [boxes_img1, boxes_img2]
+#
+# detector2 = dlib.train_simple_object_detector(images, boxes, options)
+# # We could save this detector to disk by uncommenting the following.
+# # detector2.save('detector2.svm')
+#
+# # Now let's look at its HOG filter!
+# win_det.set_image(detector2)
+# dlib.hit_enter_to_continue()
+#
+# # Note that you don't have to use the XML based input to
+# # test_simple_object_detector().  If you have already loaded your training
+# # images and bounding boxes for the objects then you can call it as shown
+# # below.
+# print("\nTraining accuracy: {}".format(
+#     dlib.test_simple_object_detector(images, boxes, detector2)))

@@ -37,18 +37,16 @@ cv2.setMouseCallback('image', draw_circle)
 
 project_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 img_dir = project_dir + '/data/test/front/'
-trimming_img_dir = project_dir + '/data/test/front/finish/'
+finish_img_dir = project_dir + '/data/test/front/finish/'
+
+finish_data = []
+index = 1
 
 files = os.listdir(img_dir)
-index = len(files)
-
 for file in files:
     rectangles = []
     while True:
         img = cv2.imread(img_dir + file)
-        orig_size = img.shape[:2]
-        view_size = (500, 500 * orig_size[0] // orig_size[1])
-        img = cv2.resize(img, view_size)
 
         for r in rectangles:
             cv2.rectangle(img, r[0], r[1], (255, 255, 255), 2)
@@ -75,7 +73,7 @@ for file in files:
                     w = abs(r[0][0] - r[1][0])
                     h = abs(r[0][1] - r[1][1])
                     trimming_img = img[y:y+h, x:x+w]
-                    cv2.imwrite(trimming_img_dir+"front"+"{0:03d}".format(index)+".jpg", trimming_img)
+                    cv2.imwrite(finish_img_dir+"front"+"{0:03d}".format(index)+".jpg", trimming_img)
                     index += 1
                 break
         elif k == ord('q'):
