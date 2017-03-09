@@ -25,30 +25,41 @@ file_name = os.path.splitext(os.path.split(movie_dir)[1])[0]
 # path = "D:\documents\PycharmProjects\check_character/data/cap/新妹魔王の契約者 OP_001/"
 # text = os.path.normcase(path)
 # files=os.listdir()
-text = ';'.join([str(i) for i in (1,2,3)])
-
-print(text)
+# text = ';'.join([str(i) for i in (1,2,3)])
+#
+# print(text)
 
 import sqlite3
 
+# dbname = "face_database.db"
+# conn = sqlite3.connect(dbname)
+# c = conn.cursor()
+#
+# IntList = list
+# sqlite3.register_adapter(IntList, lambda l: ';'.join([str(i) for i in l]))
+# sqlite3.register_converter("IntList", lambda s: [int(i) for i in s.split(';')])
+#
+# create_table = "create table images (name text, dir text, type text, box IntList)"
+# c.execute(create_table)
+#
+# sql = 'insert into images (name, dir, type, box) values (?,?,?,?)'
+# user = ("3b08b192.jpg", "D:/documents/PycharmProjects/check_character/data/test/front/3b08b192.jpg", "front", [1,2,3,4])
+# c.execute(sql, user)
+# conn.commit()
+#
+# select_sql = 'select * from images'
+# for row in c.execute(select_sql):
+#     print(row)
+#
+# conn.close()
+
 dbname = "face_database.db"
 conn = sqlite3.connect(dbname)
-c = conn.cursor()
+db = conn.cursor()
 
-IntList = list
-sqlite3.register_adapter(IntList, lambda l: ';'.join([str(i) for i in l]))
-sqlite3.register_converter("IntList", lambda s: [int(i) for i in s.split(';')])
+sql = "select name, type from images where type = 'front'"
+db.execute(sql)
+images = db.fetchall()
+names = list(map(lambda image: image[0], images))
 
-create_table = "create table images (name text, dir text, type text, box IntList)"
-c.execute(create_table)
-
-sql = 'insert into images (name, dir, type, box) values (?,?,?,?)'
-user = ("3b08b192.jpg", "D:/documents/PycharmProjects/check_character/data/test/front/3b08b192.jpg", "front", [1,2,3,4])
-c.execute(sql, user)
-conn.commit()
-
-select_sql = 'select * from images'
-for row in c.execute(select_sql):
-    print(row)
-
-conn.close()
+print(images)

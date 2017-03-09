@@ -38,13 +38,22 @@ cv2.setMouseCallback('image', draw_circle)
 
 project_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 img_set_dir = project_dir + '/data/test/front/'
+db_dir = project_dir + "/face_detector/db"
 
-dbname = "face_database.db"
-conn = sqlite3.connect(dbname)
+db_path = os.path.join(db_dir, "face_database.db")
+conn = sqlite3.connect(db_path)
 db = conn.cursor()
+
+img_type = os.path.split(img_set_dir.rstrip("/"))[1]
+sql = "select name, type from images where type = '%s'" % img_type
+db.execute(sql)
+images = db.fetchall()
+names = list(map(lambda i: i[0], images))
 
 files = os.listdir(img_set_dir)
 for file in files:
+    if file in names:
+        continue
     rectangles = []
     while True:
         file_dir = img_set_dir + file
@@ -75,7 +84,6 @@ for file in files:
                     w = abs(r[0][0] - r[1][0])
                     h = abs(r[0][1] - r[1][1])
                     sql = "insert into images (name, dir, type, box) values (?,?,?,?)"
-                    img_type = os.path.split(img_set_dir.rstrip("/"))[1]
                     image = (file, file_dir, img_type, ';'.join([str(i) for i in [x, y, w, h]]))
                     db.execute(sql, image)
                 break
