@@ -37,17 +37,18 @@ cv2.namedWindow('image')
 cv2.setMouseCallback('image', draw_circle)
 
 project_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
-img_dir = project_dir + '/data/test/front/'
-finish_img_dir = project_dir + '/data/test/front/finish/'
+img_set_dir = project_dir + '/data/test/front/'
 
-finish_data = []
-index = 1
+dbname = "face_database.db"
+conn = sqlite3.connect(dbname)
+db = conn.cursor()
 
-files = os.listdir(img_dir)
+files = os.listdir(img_set_dir)
 for file in files:
     rectangles = []
     while True:
-        img = cv2.imread(img_dir + file)
+        file_dir = img_set_dir + file
+        img = cv2.imread(file_dir)
 
         for r in rectangles:
             cv2.rectangle(img, r[0], r[1], (255, 255, 255), 2)
@@ -73,11 +74,16 @@ for file in files:
                     y = min(r[0][1], r[1][1])
                     w = abs(r[0][0] - r[1][0])
                     h = abs(r[0][1] - r[1][1])
-                    trimming_img = img[y:y+h, x:x+w]
-                    cv2.imwrite(finish_img_dir+"front"+"{0:03d}".format(index)+".jpg", trimming_img)
-                    index += 1
+                    sql = "insert into images (name, dir, type, box) values (?,?,?,?)"
+                    img_type = os.path.split(img_set_dir.rstrip("/"))[1]
+                    image = (file, file_dir, img_type, ';'.join([str(i) for i in [x, y, w, h]]))
+                    db.execute(sql, image)
                 break
         elif k == ord('q'):
+            conn.commit()
+            conn.close()
             sys.exit()
 
+conn.commit()
+conn.close()
 sys.exit()
