@@ -17,19 +17,16 @@ class SimilarPictureDeleter:
             print("no file in %s" % img_set_dir)
             return 0
 
-        target_filea_name = files[0]
-        # safe_dir = img_set_dir + "shelter/"
-        # if not os.path.exists(safe_dir):
-        #     os.mkdir(safe_dir)
+        target_file_name = files[0]
+        safe_dir = img_set_dir + "shelter/"
+        if not os.path.exists(safe_dir):
+            os.mkdir(safe_dir)
 
         for file in files:
-            if file == '.DS_Store' or file == target_filea_name:
+            if file == '.DS_Store' or file == target_file_name:
                 continue
-            target_img_path = img_set_dir + target_filea_name
-            print(target_img_path)
+            target_img_path = img_set_dir + target_file_name
             target_img = cv2.imread(target_img_path)
-            cv2.imshow("img", target_img)
-            cv2.waitKey(0)
             target_img = cv2.resize(target_img, img_size)
             target_hist = cv2.calcHist([target_img], [0], None, [256], [0, 256])
 
@@ -41,7 +38,7 @@ class SimilarPictureDeleter:
             ret = cv2.compareHist(target_hist, comparing_hist, 0)
 
             if ret < 0.95:
-                target_file = file
+                target_file_name = file
             else:
                 if mode == SimilarPictureDeleter.SAFE_MODE:
                     shutil.move(comparing_img_path, safe_dir + file)

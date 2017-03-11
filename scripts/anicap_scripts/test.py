@@ -3,12 +3,12 @@ b = []
 
 import cv2
 import os
+import sqlite3
 import sys
 import codecs
 import numpy as np
 import unicodedata
-from scripts.movie_to_picture_converter import MovieToPictureConverter
-from scripts.delete_similar_picture import SimilarPictureDeleter
+from scripts.anicap_scripts.utility import Utility
 
 
 project_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
@@ -25,11 +25,11 @@ file_name = os.path.splitext(os.path.split(movie_dir)[1])[0]
 # path = "D:\documents\PycharmProjects\check_character/data/cap/新妹魔王の契約者 OP_001/"
 # text = os.path.normcase(path)
 # files=os.listdir()
-# text = ';'.join([str(i) for i in (1,2,3)])
+text = os.path.abspath(os.path.join(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)), os.pardir))
 #
-# print(text)
+print(os.path.abspath(os.path.join(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)), os.pardir)))
 
-import sqlite3
+
 
 # dbname = "face_database.db"
 # conn = sqlite3.connect(dbname)
@@ -52,14 +52,14 @@ import sqlite3
 #     print(row)
 #
 # conn.close()
-
-dbname = "face_database.db"
-conn = sqlite3.connect(dbname)
-db = conn.cursor()
-
-sql = "select name, type from images where type = 'front'"
-db.execute(sql)
-images = db.fetchall()
-names = list(map(lambda image: image[0], images))
-
-print(images)
+#
+# dbname = "face_database.db"
+# conn = sqlite3.connect(dbname)
+# db = conn.cursor()
+#
+# sql = "select name, type from images where type = 'front'"
+# db.execute(sql)
+# images = db.fetchall()
+# names = list(map(lambda image: image[0], images))
+#
+# print(images)
